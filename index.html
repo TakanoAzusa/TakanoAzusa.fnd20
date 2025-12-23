@@ -5,15 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="theme-color" content="#000000">
         <!-- <script type="text/javascript" src="ttt.js"></script> -->
-        <!-- <link rel="stylesheet" href="stylesheet.css"> -->
+        <link rel="stylesheet" href="stylesheet.css">
     </head>
 
     <body>
         <h1>🌼今日の進捗登録🌼</h1>
         <form>
-            <p>業務：
-                <!-- <select name="prefecture" required> -->
-                <select class="form-select" required aria-label="select example" id="selectSport" style="width: 30%;">
+            <p class="inputs">業務：
+                <select name="prefecture" required id="select-task">
                 <!-- <option value="">選択してください</option> -->
                 <option value="業務1" selected>業務1</option>
                 <option value="業務2" selected>業務2</option>
@@ -23,22 +22,26 @@
                 <option value="QC" selected>QC</option>
                 </select>
             </p>
-            <p>詳細：
+            <p class="inputs">詳細：
                 <input type="text" name="name" id="detail">
             </p>
-            <p>経過時間：
+            <p class="inputs">経過時間：
                 <input type="number" min="0" max="12" step="1" value="1" id="spin1">：
                 <input type="number" min="0" max="60" step="10" value="00" id="spin2">
             </p>
-            <p>
-                <input type="button" value="登録する" id="button1">
-                <input type="button" value="reset" id="button2">
-            </p>            
+            <div class="buttons_total">
+                <a href="#" id="button1" class="buttons">登録する</a>
+                <a href="#" id="button2" class="buttons">リセット</a>
+                <!-- <input type="button" value="登録する" id="button1">
+                <input type="button" value="reset" id="button2"> -->
+            </div>            
         </form>
         <!-- <script type="text/javascript" src="ddd.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-        <canvas id="myChart" width="400" height="400"></canvas>
-        <script type="text/javascript" src="script.js"></script>
+        <div class="canvas_wrapper">
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+        <script type="text/javascript" src="ddd.js"></script>
 
     </body>
 </html>
